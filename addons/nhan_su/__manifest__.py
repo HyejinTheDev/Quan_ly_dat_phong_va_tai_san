@@ -1,35 +1,33 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "nhan_su",
+    'name': "Quản lý Nhân sự",
 
-    'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+    'summary': "Quản lý thông tin nhân viên, phòng ban, chức vụ",
 
     'description': """
-        Long description of module's purpose
+        Module quản lý nhân sự bao gồm:
+        - Quản lý thông tin nhân viên
+        - Quản lý phòng ban
+        - Quản lý chức vụ
+        - Tích hợp với module Tài sản và Phòng họp
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "BTL Nhóm",
+    'website': "",
+    'category': 'Human Resources',
+    'version': '15.0.1.0.0',
 
-    # Categories can be used to filter modules in modules listing
-    # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
-    # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
-
-    # any module necessary for this one to work correctly
     'depends': ['base'],
 
-    # always loaded
     'data': [
         'security/ir.model.access.csv',
+        'views/phong_ban.xml',
+        'views/chuc_vu.xml',
         'views/nhan_vien.xml',
         'views/menu.xml',
+        'data/demo_data.xml',
     ],
-    # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    'demo': [],
+    'installable': True,
+    'application': True,
 }

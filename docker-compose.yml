@@ -10,12 +10,13 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-odoo}
       PGDATA: /data/postgres
     volumes:
-       - /home/ttdn/ttdn_k15/database_ttdn/_data:/data/postgres
+       - postgres_data:/data/postgres
     ports:
       - "5431:5432"
-    # networks:
-    #   - postgres
-    # restart: unless-stopped
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
 
   # pgadmin:
   #   container_name: pgadmin_container

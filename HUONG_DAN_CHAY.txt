@@ -1,0 +1,67 @@
+===============================================
+  HUONG DAN CHAY PROJECT ODOO 15 - BTL
+===============================================
+
+YEU CAU:
+- Windows 10/11
+- Da cai Docker Desktop (bat WSL2 backend)
+- Da cai Ubuntu 22.04 tren WSL2
+
+===============================================
+BUOC 1: MO UBUNTU 22.04
+===============================================
+Start Menu -> tim "Ubuntu 22.04" -> mo
+
+===============================================
+BUOC 2: KHOI DONG POSTGRESQL (DOCKER)
+===============================================
+cd /mnt/c/hoinhap/btl
+sudo docker-compose up -d
+
+===============================================
+BUOC 3: CAI PYTHON + THU VIEN (CHI LAN DAU)
+===============================================
+sudo apt update
+sudo apt install python3.10 python3.10-venv python3-pip python3.10-dev -y
+sudo apt install libxml2-dev libxslt1-dev zlib1g-dev libsasl2-dev libldap2-dev libssl-dev libpq-dev libjpeg-dev libffi-dev -y
+sudo apt install node-less npm -y
+sudo npm install -g rtlcss
+
+python3 -m venv ~/odoo-venv
+source ~/odoo-venv/bin/activate
+pip install --upgrade pip
+pip install setuptools==58.0.0
+pip install -r requirements.txt
+
+===============================================
+BUOC 4: CHAY ODOO (LAN DAU - CAI MODULE)
+===============================================
+source ~/odoo-venv/bin/activate
+cd /mnt/c/hoinhap/btl
+python3 odoo-bin.py --db_host=localhost --db_port=5431 --db_user=odoo --db_password=odoo --addons-path=addons --http-port=8069 -d odoo_btl -i nhan_su,quan_ly_tai_san,quan_ly_phong_hop
+
+===============================================
+BUOC 5: MO TRINH DUYET
+===============================================
+http://localhost:8069
+Dang nhap: admin / admin
+
+===============================================
+LAN SAU CHAY LAI (SAU KHI TAT MAY)
+===============================================
+Mo Ubuntu 22.04, chay 4 lenh:
+
+cd /mnt/c/hoinhap/btl
+sudo docker-compose up -d
+source ~/odoo-venv/bin/activate
+python3 odoo-bin.py --db_host=localhost --db_port=5431 --db_user=odoo --db_password=odoo --addons-path=addons --http-port=8069 -d odoo_btl
+
+* Lan sau KHONG CAN -i hay -u, chi can khi sua code module thi them: -u ten_module
+
+===============================================
+LUU Y
+===============================================
+- Duong dan /mnt/c/hoinhap/btl la thu muc project tren Windows (C:\hoinhap\btl)
+- Neu doi thu muc, thay doi duong dan tuong ung
+- Port PostgreSQL la 5431 (theo docker-compose.yml)
+- Neu loi "Connection refused" -> kiem tra Docker Desktop da mo chua
