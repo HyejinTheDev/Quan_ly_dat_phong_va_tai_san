@@ -24,10 +24,17 @@
         'views/phong_ban.xml',
         'views/chuc_vu.xml',
         'views/nhan_vien.xml',
+        'views/nhan_vien_kanban.xml',
         'views/menu.xml',
-        'data/demo_data.xml',
     ],
-    'demo': [],
+    'assets': {
+        'web.assets_backend': [
+            'nhan_su/static/src/css/style.css',
+        ],
+    },
+    'demo': [
+        'demo/demo.xml',
+    ],
     'installable': True,
     'application': True,
 }

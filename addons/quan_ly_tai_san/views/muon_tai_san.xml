@@ -48,7 +48,7 @@
         <record id="action_muon_tai_san" model="ir.actions.act_window">
             <field name="name">Mượn tài sản</field>
             <field name="res_model">muon_tai_san</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>
         </record>
     </data>
 </odoo>

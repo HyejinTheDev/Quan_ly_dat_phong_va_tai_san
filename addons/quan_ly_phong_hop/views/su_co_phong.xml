@@ -50,7 +50,7 @@
         <record id="action_su_co_phong" model="ir.actions.act_window">
             <field name="name">Sự cố phòng họp</field>
             <field name="res_model">su_co_phong</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>
         </record>
     </data>
 </odoo>

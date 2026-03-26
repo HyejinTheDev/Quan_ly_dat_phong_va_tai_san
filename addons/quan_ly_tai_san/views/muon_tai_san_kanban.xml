@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Kanban mượn tài sản - grouped by trạng thái (dạng bảng workflow) -->
+        <record id="view_muon_tai_san_kanban" model="ir.ui.view">
+            <field name="name">muon_tai_san.kanban</field>
+            <field name="model">muon_tai_san</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="trang_thai" class="tai_san_kanban">
+                    <field name="tai_san_id"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="ngay_muon"/>
+                    <field name="ngay_tra_du_kien"/>
+                    <field name="trang_thai"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click oe_kanban_card">
+                                <div class="o_kanban_record_top">
+                                    <strong><i class="fa fa-laptop"/> <field name="tai_san_id"/></strong>
+                                </div>
+                                <div class="o_kanban_record_body">
+                                    <div><i class="fa fa-user text-muted"/> <field name="nhan_vien_id"/></div>
+                                    <div><i class="fa fa-calendar text-muted"/> <field name="ngay_muon"/> → <field name="ngay_tra_du_kien"/></div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>

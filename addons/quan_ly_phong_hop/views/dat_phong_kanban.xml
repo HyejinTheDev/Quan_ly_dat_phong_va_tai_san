@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Kanban đặt phòng - grouped by trạng thái (dạng bảng workflow) -->
+        <record id="view_dat_phong_kanban" model="ir.ui.view">
+            <field name="name">dat_phong.kanban</field>
+            <field name="model">dat_phong</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="trang_thai" class="phong_hop_kanban">
+                    <field name="phong_hop_id"/>
+                    <field name="nhan_vien_id"/>
+                    <field name="thoi_gian_bat_dau"/>
+                    <field name="thoi_gian_ket_thuc"/>
+                    <field name="so_nguoi"/>
+                    <field name="trang_thai"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click oe_kanban_card">
+                                <div class="o_kanban_record_top">
+                                    <strong><i class="fa fa-building"/> <field name="phong_hop_id"/></strong>
+                                </div>
+                                <div class="o_kanban_record_body">
+                                    <div><i class="fa fa-user text-muted"/> <field name="nhan_vien_id"/></div>
+                                    <div><i class="fa fa-users text-muted"/> <field name="so_nguoi"/> người</div>
+                                    <div><i class="fa fa-clock-o text-muted"/> <field name="thoi_gian_bat_dau"/></div>
+                                    <div><i class="fa fa-clock-o text-muted"/> → <field name="thoi_gian_ket_thuc"/></div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>

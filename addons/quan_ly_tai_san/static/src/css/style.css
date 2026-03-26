@@ -1,0 +1,47 @@
+.tai_san_kanban .o_kanban_record {
+    border-left: 4px solid #00A09D;
+    transition: box-shadow 0.2s;
+}
+.tai_san_kanban .o_kanban_record:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.tai_san_kanban .o_kanban_image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.tai_san_kanban .oe_kanban_details h4 {
+    font-weight: bold;
+}
+
+.phong_hop_kanban .o_kanban_record {
+    border-left: 4px solid #ED7D31;
+    transition: box-shadow 0.2s;
+}
+.phong_hop_kanban .o_kanban_record:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Dashboard cards */
+.o_dashboard_card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.o_dashboard_card:hover {
+    transform: translateY(-2px);
+}
+.o_dashboard_number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #875A7B;
+}
+.o_dashboard_label {
+    font-size: 14px;
+    color: #666;
+    margin-top: 4px;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Kanban sự cố tài sản -->
+        <record id="view_su_co_kanban" model="ir.ui.view">
+            <field name="name">su_co_tai_san.kanban</field>
+            <field name="model">su_co_tai_san</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="trang_thai">
+                    <field name="tai_san_id"/>
+                    <field name="nhan_vien_bao_cao"/>
+                    <field name="loai_su_co"/>
+                    <field name="ngay_bao_cao"/>
+                    <field name="trang_thai"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click oe_kanban_card">
+                                <div class="o_kanban_record_top">
+                                    <strong>
+                                        <t t-if="record.loai_su_co.raw_value == 'hong'"><i class="fa fa-exclamation-triangle text-warning"/></t>
+                                        <t t-if="record.loai_su_co.raw_value == 'mat'"><i class="fa fa-times-circle text-danger"/></t>
+                                        <field name="tai_san_id"/>
+                                    </strong>
+                                </div>
+                                <div class="o_kanban_record_body">
+                                    <div><field name="loai_su_co"/></div>
+                                    <div><i class="fa fa-user text-muted"/> <field name="nhan_vien_bao_cao"/></div>
+                                    <div><i class="fa fa-clock-o text-muted"/> <field name="ngay_bao_cao"/></div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,56 @@
+.nhan_su_kanban .o_kanban_record {
+    border-left: 4px solid #875A7B;
+}
+.nhan_su_kanban .o_kanban_image {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.nhan_su_kanban .oe_kanban_details h4 {
+    font-weight: bold;
+    color: #333;
+}
+.nhan_su_kanban .o_kanban_record_bottom {
+    border-top: 1px solid #eee;
+    padding-top: 4px;
+    margin-top: 4px;
+}
+
+/* Phòng ban colors */
+.phong_ban_card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+/* Badge styles */
+.badge_san_sang {
+    background-color: #28a745;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+}
+.badge_dang_muon {
+    background-color: #17a2b8;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+}
+.badge_hong {
+    background-color: #dc3545;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+}
+.badge_bao_tri {
+    background-color: #ffc107;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+}

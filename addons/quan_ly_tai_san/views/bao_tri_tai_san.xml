@@ -46,7 +46,7 @@
         <record id="action_bao_tri" model="ir.actions.act_window">
             <field name="name">Bảo trì tài sản</field>
             <field name="res_model">bao_tri_tai_san</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>
         </record>
     </data>
 </odoo>

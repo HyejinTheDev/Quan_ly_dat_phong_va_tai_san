@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+    <t t-name="dashboard_template">
+        <div class="o_dashboard_main" style="padding: 20px; background: #f0f0f0; min-height: 100vh;">
+            <!-- Header -->
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h1 style="color: #875A7B; font-weight: bold;">📊 Tổng quan Hệ thống</h1>
+                <p class="text-muted" style="font-size: 16px;">Quản lý Nhân sự - Tài sản - Phòng họp</p>
+            </div>
+
+            <!-- Row 1: Stats Cards -->
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col-md-3">
+                    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 20px; color: white; text-align: center; box-shadow: 0 4px 15px rgba(102,126,234,0.4); cursor: pointer;" class="dashboard_card_nv">
+                        <i class="fa fa-users" style="font-size: 32px; margin-bottom: 10px;"/>
+                        <div class="dashboard_nhan_vien_count" style="font-size: 36px; font-weight: bold;">0</div>
+                        <div style="font-size: 14px; opacity: 0.9;">Nhân viên</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div style="background: linear-gradient(135deg, #00b09b 0%, #96c93d 100%); border-radius: 12px; padding: 20px; color: white; text-align: center; box-shadow: 0 4px 15px rgba(0,176,155,0.4); cursor: pointer;" class="dashboard_card_ts">
+                        <i class="fa fa-laptop" style="font-size: 32px; margin-bottom: 10px;"/>
+                        <div class="dashboard_tai_san_count" style="font-size: 36px; font-weight: bold;">0</div>
+                        <div style="font-size: 14px; opacity: 0.9;">Tài sản</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 12px; padding: 20px; color: white; text-align: center; box-shadow: 0 4px 15px rgba(245,87,108,0.4); cursor: pointer;" class="dashboard_card_ph">
+                        <i class="fa fa-building" style="font-size: 32px; margin-bottom: 10px;"/>
+                        <div class="dashboard_phong_hop_count" style="font-size: 36px; font-weight: bold;">0</div>
+                        <div style="font-size: 14px; opacity: 0.9;">Phòng họp</div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; padding: 20px; color: white; text-align: center; box-shadow: 0 4px 15px rgba(79,172,254,0.4); cursor: pointer;" class="dashboard_card_dp">
+                        <i class="fa fa-calendar-check-o" style="font-size: 32px; margin-bottom: 10px;"/>
+                        <div class="dashboard_dat_phong_count" style="font-size: 36px; font-weight: bold;">0</div>
+                        <div style="font-size: 14px; opacity: 0.9;">Đặt phòng hôm nay</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Tài sản status + Phòng họp status -->
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col-md-6">
+                    <div style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h4 style="color: #333; margin-bottom: 15px;"><i class="fa fa-pie-chart text-success"/> Trạng thái Tài sản</h4>
+                        <div class="dashboard_tai_san_status"/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h4 style="color: #333; margin-bottom: 15px;"><i class="fa fa-building text-primary"/> Trạng thái Phòng họp</h4>
+                        <div class="dashboard_phong_hop_status"/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3: Recent activities -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h4 style="color: #333; margin-bottom: 15px;"><i class="fa fa-exchange text-warning"/> Mượn tài sản gần đây</h4>
+                        <div class="dashboard_muon_tai_san"/>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div style="background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h4 style="color: #333; margin-bottom: 15px;"><i class="fa fa-exclamation-triangle text-danger"/> Sự cố gần đây</h4>
+                        <div class="dashboard_su_co"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

@@ -97,7 +97,7 @@
         <record id="action_tai_san" model="ir.actions.act_window">
             <field name="name">Tài sản</field>
             <field name="res_model">tai_san</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">kanban,tree,form</field>
             <field name="search_view_id" ref="tai_san_search"/>
         </record>
     </data>

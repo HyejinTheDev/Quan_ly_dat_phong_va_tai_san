@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Kanban bảo trì - grouped by trạng thái -->
+        <record id="view_bao_tri_kanban" model="ir.ui.view">
+            <field name="name">bao_tri_tai_san.kanban</field>
+            <field name="model">bao_tri_tai_san</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="trang_thai">
+                    <field name="tai_san_id"/>
+                    <field name="nhan_vien_phu_trach"/>
+                    <field name="ngay_bao_tri"/>
+                    <field name="chi_phi"/>
+                    <field name="trang_thai"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click oe_kanban_card">
+                                <div class="o_kanban_record_top">
+                                    <strong><i class="fa fa-wrench"/> <field name="tai_san_id"/></strong>
+                                </div>
+                                <div class="o_kanban_record_body">
+                                    <div><i class="fa fa-user text-muted"/> <field name="nhan_vien_phu_trach"/></div>
+                                    <div><i class="fa fa-calendar text-muted"/> <field name="ngay_bao_tri"/></div>
+                                    <div><i class="fa fa-money text-muted"/> <field name="chi_phi"/> VNĐ</div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>

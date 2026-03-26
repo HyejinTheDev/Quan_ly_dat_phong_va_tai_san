@@ -65,7 +65,7 @@
         <record id="action_dat_phong" model="ir.actions.act_window">
             <field name="name">Đặt phòng</field>
             <field name="res_model">dat_phong</field>
-            <field name="view_mode">tree,form,calendar</field>
+            <field name="view_mode">kanban,tree,form,calendar</field>
         </record>
     </data>
 </odoo>

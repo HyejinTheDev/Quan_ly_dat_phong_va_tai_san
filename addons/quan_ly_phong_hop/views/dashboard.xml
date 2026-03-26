@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Dashboard action -->
+        <record id="action_dashboard" model="ir.actions.client">
+            <field name="name">📊 Tổng quan</field>
+            <field name="tag">dashboard_tong_quan</field>
+        </record>
+
+        <!-- Menu gốc cho Dashboard -->
+        <menuitem id="menu_dashboard_root" name="📊 Tổng quan" sequence="-1" action="action_dashboard"/>
+    </data>
+</odoo>

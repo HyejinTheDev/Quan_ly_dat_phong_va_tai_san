@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Kanban sự cố phòng họp -->
+        <record id="view_su_co_phong_kanban" model="ir.ui.view">
+            <field name="name">su_co_phong.kanban</field>
+            <field name="model">su_co_phong</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="trang_thai">
+                    <field name="phong_hop_id"/>
+                    <field name="thiet_bi_hong"/>
+                    <field name="nhan_vien_bao_cao"/>
+                    <field name="xu_ly"/>
+                    <field name="trang_thai"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click oe_kanban_card">
+                                <div class="o_kanban_record_top">
+                                    <strong><i class="fa fa-exclamation-circle text-danger"/> <field name="phong_hop_id"/></strong>
+                                </div>
+                                <div class="o_kanban_record_body">
+                                    <div t-if="record.thiet_bi_hong.value"><i class="fa fa-wrench text-warning"/> <field name="thiet_bi_hong"/></div>
+                                    <div><i class="fa fa-user text-muted"/> <field name="nhan_vien_bao_cao"/></div>
+                                    <div t-if="record.xu_ly.value"><field name="xu_ly"/></div>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+    </data>
+</odoo>
